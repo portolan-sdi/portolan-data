@@ -56,7 +56,7 @@ To work on a proposal from this repository, comment on its issue before you star
 This helps the community avoid duplicate work and coordinate open questions.
 
 You can host a catalog in your own S3-compatible storage.
-[Source Cooperative](https://source.coop/) also provides free storage for open data.
+[Source Cooperative](https://source.coop/) provides free hosting for data that supports the Portolan project.
 The shared Portolan mirrors organization is available for suitable community mirrors.
 See [portolan-ops#1](https://github.com/portolan-sdi/portolan-ops/issues/1) for current hosting details.
 
