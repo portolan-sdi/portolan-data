@@ -1,0 +1,60 @@
+name: Propose a dataset
+description: Suggest a dataset for publication as a Portolan catalog
+title: "Dataset: "
+labels: [dataset]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Tell us about a dataset that would be useful in Portolan. If we accept
+        the proposal, we mirror the source data and convert it to supported
+        cloud-native formats where needed. We then publish it as a Portolan
+        catalog and submit the catalog to the registry. See the
+        [catalog workflow](https://github.com/portolan-sdi/portolan-data#how-accepted-datasets-are-published)
+        for more information.
+  - type: input
+    id: dataset-name
+    attributes:
+      label: Dataset name
+      description: The public name of the dataset.
+    validations:
+      required: true
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher
+      description: The organization or person that publishes the source data.
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Upstream source URL
+      description: A link to the source data or its official landing page.
+      placeholder: https://example.org/dataset
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License or terms
+      description: The license or terms for reuse. Enter Unknown if you do not know.
+      placeholder: Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Why would this dataset be useful in Portolan?
+      description: Describe who could use the dataset and what they could do with it.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: >-
+        Optional. Add useful context such as coverage, formats, update
+        frequency, or access constraints.
+    validations:
+      required: false

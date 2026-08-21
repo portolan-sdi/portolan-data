@@ -1,30 +1,59 @@
-# portolan-data
+# Portolan Data
 
-Tracking the creation of **Portolan catalogs** — cloud-native geospatial data catalogs (STAC + GeoParquet / COG) that anyone can browse, query, and build on.
+This repository coordinates official Portolan catalogs and community mirrors.
+Each issue tracks one dataset from proposal through publication.
 
-This repo isn't code — it's a **coordination board**. Each issue is a catalog to create: either an **official** dataset published as a Portolan catalog, or a **mirror** of an existing data source.
+A Portolan catalog publishes geospatial data as plain files in cloud storage.
+People and agents can inspect the metadata and query the data with standard tools.
+The [Portolan registry](https://github.com/portolan-sdi/portolan-registry) connects published catalogs into a searchable network.
 
-## Get involved
+## Propose a Dataset
 
-- 💡 **Ideas welcome from anyone.** Have a dataset that would make a great Portolan catalog or mirror? [Open an issue](https://github.com/portolan-sdi/portolan-data/issues/new) and propose it.
-- 🙋 **Claim an issue.** Anyone is welcome to pick up an open issue, build the catalog, and put it up. Comment on the issue to claim it.
-- ☁️ **Free hosting.** Catalogs can be hosted for free on [Source Coop](https://source.coop) — including under the shared Portolan mirrors organization (see [portolan-ops#1](https://github.com/portolan-sdi/portolan-ops/issues/1)).
+Use the [dataset proposal form](https://github.com/portolan-sdi/portolan-data/issues/new?template=dataset_request.yml) to suggest a dataset.
+You only need information about the source and why the dataset would be useful.
 
-## Two kinds of catalog
+The form asks for:
 
-- **Official** — a first-class Portolan catalog for a dataset.
-- **Mirror** — a Portolan catalog that mirrors an upstream source. Mirrors include a `via` link to the source (or `canonical` if the source has its own STAC catalog) and record when the mirror was last updated.
+- The dataset name and publisher.
+- The upstream source URL.
+- The license or terms, if known.
+- The reason the dataset would be useful in Portolan.
+- Optional notes about coverage, formats, update frequency, or access constraints.
 
-## How a catalog gets built
+You do not need to design the catalog or plan the conversion work.
 
-1. Acquire the source data
-2. Convert to cloud-native formats (GeoParquet for vector, COG for raster)
-3. Build a STAC catalog + `metadata.yaml` per the [Portolan spec](https://github.com/portolan-sdi/portolan-spec)
-4. Publish to a cloud bucket
-5. Register it on the [Portolan registry](https://github.com/portolan-sdi/portolan-registry)
+## How Accepted Datasets Are Published
 
-The [Portolan CLI](https://github.com/portolan-sdi/portolan-cli) helps with most of these steps.
+When Portolan accepts a proposal, contributors:
 
----
+1. Mirror the source data.
+2. Convert the data to Portolan-supported cloud-native formats where needed.
+3. Publish the data and metadata as a Portolan catalog.
+4. Submit the catalog to the [Portolan registry](https://github.com/portolan-sdi/portolan-registry).
 
-Part of [Portolan](https://github.com/portolan-sdi) — tools for cloud-native geospatial Spatial Data Infrastructure.
+The [Portolan spec](https://github.com/portolan-sdi/portolan-spec) defines the catalog requirements.
+The [Portolan CLI](https://github.com/portolan-sdi/portolan-cli) supports catalog creation.
+
+## Official Catalogs and Mirrors
+
+An official catalog comes from the organization that publishes the dataset.
+A mirror republishes an upstream dataset as a Portolan catalog.
+
+Mirrors keep the source visible in their metadata.
+They use a `via` link for an upstream source or a `canonical` link for an upstream STAC catalog.
+They also record the date of the latest mirror update.
+
+## Contribute a Catalog
+
+To work on an accepted proposal, comment on its issue before you start.
+This helps contributors avoid duplicate work and coordinate open questions.
+
+You can host a catalog in your own S3-compatible storage.
+[Source Cooperative](https://source.coop/) also provides free storage for open data.
+The shared Portolan mirrors organization is available for suitable community mirrors.
+See [portolan-ops#1](https://github.com/portolan-sdi/portolan-ops/issues/1) for current hosting details.
+
+For questions, use the [Portolan Google Group](https://groups.google.com/g/portolan) or the [Portolan channel](https://cloudnativegeo.slack.com/archives/C0A1JBH9529) in Cloud-Native Geo Slack.
+
+Portolan is an open-source standard under the Apache-2.0 license.
+Visit the [Portolan website](https://www.portolan-sdi.org/) for the overview and documentation.
