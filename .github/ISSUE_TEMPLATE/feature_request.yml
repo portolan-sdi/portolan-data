@@ -1,0 +1,54 @@
+name: Feature request
+description: Propose a new capability
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Write the top for a human. Show the gap rather than arguing for it.
+        Put design detail lower down. Length is fine when the opening makes
+        the outcome obvious.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: >-
+        The situation where current behavior falls short, and who it affects.
+        For spec-related features, name the spec requirement involved.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Show the gap
+      description: >-
+        Run the thing against real data and paste what you got. Name the
+        dataset: a URL or a catalog path. If the capability is missing
+        entirely, show the workaround you use today and what it costs.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What the tool should do instead. Name the command or the output.
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Implementation details
+      description: >-
+        Optional. Where this would live, options you considered, and edge
+        cases the design must handle.
+    validations:
+      required: false
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: >-
+        Optional. The command that proves the capability works, and the data
+        it runs against.
+    validations:
+      required: false

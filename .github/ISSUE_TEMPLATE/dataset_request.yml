@@ -1,0 +1,65 @@
+name: Propose a dataset
+description: Propose a dataset for community coordination
+title: "Dataset: "
+labels: [dataset]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        The open-source Portolan community encourages dataset publishers and
+        contributors to build their own catalogs. Submit completed catalogs to
+        the [Portolan registry](https://github.com/portolan-sdi/portolan-registry).
+        Use this form when a dataset seems important but needs community
+        attention. It is especially useful for global datasets with broad
+        public value. When contributors
+        take on a proposal, they mirror the source data and convert it to
+        Portolan-supported cloud-native formats where needed. They then
+        publish a Portolan catalog and submit it to the registry. See the
+        [community workflow](https://github.com/portolan-sdi/portolan-data#how-the-community-publishes-proposed-datasets)
+        for more information.
+  - type: input
+    id: dataset-name
+    attributes:
+      label: Dataset name
+      description: The public name of the dataset.
+    validations:
+      required: true
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher
+      description: The organization or person that publishes the source data.
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Upstream source URL
+      description: A link to the source data or its official landing page.
+      placeholder: https://example.org/dataset
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License or terms
+      description: The license or terms for reuse. Enter Unknown if you do not know.
+      placeholder: Unknown
+    validations:
+      required: true
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Why would this dataset be useful in Portolan?
+      description: Describe who could use the dataset and what they could do with it.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: >-
+        Optional. Add useful context such as coverage, formats, update
+        frequency, or access constraints.
+    validations:
+      required: false
