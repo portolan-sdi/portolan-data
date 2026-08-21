@@ -1,7 +1,7 @@
 # Portolan Data
 
-This repository coordinates official Portolan catalogs and community mirrors.
-Each issue tracks one dataset from proposal through publication.
+This repository supports the open-source Portolan community.
+Contributors use it to coordinate official Portolan catalogs and community mirrors.
 
 A Portolan catalog publishes geospatial data as plain files in cloud storage.
 People and agents can inspect the metadata and query the data with standard tools.
@@ -9,8 +9,12 @@ The [Portolan registry](https://github.com/portolan-sdi/portolan-registry) conne
 
 ## Propose a Dataset
 
-Use the [dataset proposal form](https://github.com/portolan-sdi/portolan-data/issues/new?template=dataset_request.yml) to suggest a dataset.
-You only need information about the source and why the dataset would be useful.
+If you publish or maintain a dataset, build a Portolan catalog and submit it to the [Portolan registry](https://github.com/portolan-sdi/portolan-registry).
+Community contributions do not need a proposal here first.
+
+Use the [dataset proposal form](https://github.com/portolan-sdi/portolan-data/issues/new?template=dataset_request.yml) for datasets that need community attention.
+The form is especially useful for a global dataset with broad public value.
+The proposal gives contributors a place to coordinate the work.
 
 The form asks for:
 
@@ -22,9 +26,9 @@ The form asks for:
 
 You do not need to design the catalog or plan the conversion work.
 
-## How Accepted Datasets Are Published
+## How the Community Publishes Proposed Datasets
 
-When Portolan accepts a proposal, contributors:
+When contributors take on a proposal, they:
 
 1. Mirror the source data.
 2. Convert the data to Portolan-supported cloud-native formats where needed.
@@ -45,8 +49,11 @@ They also record the date of the latest mirror update.
 
 ## Contribute a Catalog
 
-To work on an accepted proposal, comment on its issue before you start.
-This helps contributors avoid duplicate work and coordinate open questions.
+Build a catalog for a dataset you publish, maintain, or want to mirror.
+Submit the catalog to the [Portolan registry](https://github.com/portolan-sdi/portolan-registry) when it meets the spec.
+
+To work on a proposal from this repository, comment on its issue before you start.
+This helps the community avoid duplicate work and coordinate open questions.
 
 You can host a catalog in your own S3-compatible storage.
 [Source Cooperative](https://source.coop/) also provides free storage for open data.

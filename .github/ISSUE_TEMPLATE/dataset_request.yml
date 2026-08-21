@@ -1,16 +1,21 @@
 name: Propose a dataset
-description: Suggest a dataset for publication as a Portolan catalog
+description: Propose a dataset for community coordination
 title: "Dataset: "
 labels: [dataset]
 body:
   - type: markdown
     attributes:
       value: >-
-        Tell us about a dataset that would be useful in Portolan. If we accept
-        the proposal, we mirror the source data and convert it to supported
-        cloud-native formats where needed. We then publish it as a Portolan
-        catalog and submit the catalog to the registry. See the
-        [catalog workflow](https://github.com/portolan-sdi/portolan-data#how-accepted-datasets-are-published)
+        The open-source Portolan community encourages dataset publishers and
+        contributors to build their own catalogs. Submit completed catalogs to
+        the [Portolan registry](https://github.com/portolan-sdi/portolan-registry).
+        Use this form when a dataset seems important but needs community
+        attention. It is especially useful for global datasets with broad
+        public value. When contributors
+        take on a proposal, they mirror the source data and convert it to
+        Portolan-supported cloud-native formats where needed. They then
+        publish a Portolan catalog and submit it to the registry. See the
+        [community workflow](https://github.com/portolan-sdi/portolan-data#how-the-community-publishes-proposed-datasets)
         for more information.
   - type: input
     id: dataset-name
